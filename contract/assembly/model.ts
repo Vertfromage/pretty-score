@@ -1,4 +1,4 @@
-import { context, PersistentVector } from "near-sdk-as";
+import { context, PersistentVector, PersistentMap } from "near-sdk-as";
 
 /** 
  * Exporting a new class HighScore so it can be used outside of this file.
@@ -19,3 +19,5 @@ import { context, PersistentVector } from "near-sdk-as";
  * // Unsorted array of 10 biggest scores
  */
 export const highScoreList = new PersistentVector<HighScore>("s");
+
+export const levelsMap = new PersistentMap<u32,string>("l");
